@@ -13,6 +13,7 @@ sum_xy = 0.0
 sum_x_squared = 0.0
 avenrage_x = 0.0
 avenrage_y = 0.0
+gradient = 0.0
 
 #Number of pairs is half the number of values, excluding script name
 pair_num = (len(sys.argv) - 1) / 2
@@ -58,4 +59,10 @@ print "Sum of x * y is: " + str(sum_xy)
 for i in pairs:
     sum_x_squared = sum_x_squared + (i[0] ** 2)
 
+#Debug code
 print "Sum of x squared is: " + str(sum_x_squared)
+
+gradient = (sum_xy - pair_num * average_x * average_y) / (sum_x_squared - pair_num * average_x ** 2)
+
+#Debug code
+print "Gradient is: " + str(gradient)
