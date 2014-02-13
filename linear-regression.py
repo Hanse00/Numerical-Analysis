@@ -14,6 +14,7 @@ sum_x_squared = 0.0
 avenrage_x = 0.0
 avenrage_y = 0.0
 gradient = 0.0
+y_intercept = 0.0
 
 #Number of pairs is half the number of values, excluding script name
 pair_num = (len(sys.argv) - 1) / 2
@@ -66,3 +67,10 @@ gradient = (sum_xy - pair_num * average_x * average_y) / (sum_x_squared - pair_n
 
 #Debug code
 print "Gradient is: " + str(gradient)
+
+y_intercept = average_y - (gradient * average_x)
+
+#Debug code
+print "Y intercept is: " + str(y_intercept)
+
+print "Formula : y = " + str(gradient) + "x + " + str(y_intercept)
