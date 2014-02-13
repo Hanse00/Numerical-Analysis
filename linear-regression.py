@@ -73,4 +73,4 @@ y_intercept = average_y - (gradient * average_x)
 #Debug code
 print "Y intercept is: " + str(y_intercept)
 
-print "Formula : y = " + str(gradient) + "x + " + str(y_intercept)
+print "Formula : y = %.4fx + %.4f" % (gradient, y_intercept)
