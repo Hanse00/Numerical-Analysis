@@ -27,15 +27,15 @@ for i in range(pair_num):
     print "(" + str(sys.argv[x]) + ", " + str(sys.argv[y]) + ")"
 
     #Save input as two dimensional list
-    pairs.append([sys.argv[x],sys.argv[y]])
+    pairs.append([float(sys.argv[x]),float(sys.argv[y])])
 
 #Debug code
 print pairs
 
 #Sum x and y values
 for i in pairs:
-    sum_x = sum_x + float(i[0])
-    sum_y = sum_y + float(i[1])
+    sum_x = sum_x + i[0]
+    sum_y = sum_y + i[1]
 
 average_x = sum_x / pair_num
 average_y = sum_y / pair_num
@@ -50,12 +50,12 @@ print "Average of y values: " + str(average_y)
 
 #Sum of x * y is x * y for each pair added together
 for i in pairs:
-    sum_xy = sum_xy + (float(i[0]) * float(i[1]))
+    sum_xy = sum_xy + (i[0] * i[1])
 
 #Debug code
 print "Sum of x * y is: " + str(sum_xy)
 
 for i in pairs:
-    sum_x_squared = sum_x_squared + (float(i[0]) ** 2)
+    sum_x_squared = sum_x_squared + (i[0] ** 2)
 
 print "Sum of x squared is: " + str(sum_x_squared)
