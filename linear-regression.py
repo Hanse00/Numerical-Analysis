@@ -9,6 +9,7 @@ import sys
 pairs = []
 sum_x = 0.0
 sum_y = 0.0
+sum_xy = 0.0
 avenrage_x = 0.0
 avenrage_y = 0.0
 
@@ -45,3 +46,9 @@ print "Sum of y values: " + str(sum_y)
 print "Average of x values: " + str(average_x)
 print "Average of y values: " + str(average_y)
 #Debug end
+
+#Sum of x * y is x * y for each pair added together
+for i in pairs:
+    sum_xy = sum_xy + (float(i[0]) * float(i[1]))
+
+print "Sum of x * y is: " + str(sum_xy)
