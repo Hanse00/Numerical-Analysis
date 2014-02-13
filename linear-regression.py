@@ -11,6 +11,8 @@ sum_x = 0.0
 sum_y = 0.0
 sum_xy = 0.0
 sum_x_squared = 0.0
+sum_x_squared = 0.0
+avenrage_x = 0.0
 avenrage_x = 0.0
 avenrage_y = 0.0
 gradient = 0.0
@@ -18,6 +20,12 @@ y_intercept = 0.0
 
 #Number of pairs is half the number of values, excluding script name
 pair_num = (len(sys.argv) - 1) / 2
+
+#Exit if an insufficient number of variables have has been entered
+if pair_num < 2:
+    print "Number of variables too small!"
+    print "Usage: linear-regiression.py x1,y1 x2,y2 x3,y3..."
+    sys.exit(-1)
 
 #Debug code
 #print "Pairs inputted: " + str(pair_num)
