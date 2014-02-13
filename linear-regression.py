@@ -10,6 +10,7 @@ pairs = []
 sum_x = 0.0
 sum_y = 0.0
 sum_xy = 0.0
+sum_x_squared = 0.0
 avenrage_x = 0.0
 avenrage_y = 0.0
 
@@ -51,4 +52,10 @@ print "Average of y values: " + str(average_y)
 for i in pairs:
     sum_xy = sum_xy + (float(i[0]) * float(i[1]))
 
+#Debug code
 print "Sum of x * y is: " + str(sum_xy)
+
+for i in pairs:
+    sum_x_squared = sum_x_squared + (float(i[0]) ** 2)
+
+print "Sum of x squared is: " + str(sum_x_squared)
