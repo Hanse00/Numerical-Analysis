@@ -59,12 +59,14 @@ for i in pairs:
 #Debug code
 #print "Sum of x * y is: " + str(sum_xy)
 
+#Sum of x values squared
 for i in pairs:
     sum_x_squared = sum_x_squared + (i[0] ** 2)
 
 #Debug code
 #print "Sum of x squared is: " + str(sum_x_squared)
 
+#Graident = sum of x * y - n * average x * average y / x values squared - n * average x squared
 gradient = (sum_xy - pair_num * average_x * average_y) / (sum_x_squared - pair_num * average_x ** 2)
 
 #Debug code
@@ -75,4 +77,5 @@ y_intercept = average_y - (gradient * average_x)
 #Debug code
 #print "Y intercept is: " + str(y_intercept)
 
+#Print result to four decimal points
 print "Formula: y = %.4fx + %.4f" % (gradient, y_intercept)
