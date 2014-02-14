@@ -11,7 +11,6 @@ sum_x = 0.0
 sum_y = 0.0
 sum_xy = 0.0
 sum_x_squared = 0.0
-sum_x_squared = 0.0
 avenrage_x = 0.0
 avenrage_x = 0.0
 avenrage_y = 0.0
