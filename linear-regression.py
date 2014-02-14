@@ -73,7 +73,7 @@ for i in pairs:
 #Debug code
 #print "Sum of x squared is: " + str(sum_x_squared)
 
-#Graident = sum of x * y - n * average x * average y / x values squared - n * average x squared
+#Gradient = sum of x * y - n * average x * average y / x values squared - n * average x squared
 gradient = (sum_xy - pair_num * average_x * average_y) / (sum_x_squared - pair_num * average_x ** 2)
 
 #Debug code
