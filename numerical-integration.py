@@ -18,6 +18,7 @@ number_of_segments = 0
 
 #Define helper variables
 segment_size = 0.0
+current_x = 0.0
 
 
 #Exit if an insufficient number of variables have has been entered 
@@ -34,4 +35,6 @@ else:
 
     segment_size = (x_max - x_min) / number_of_segments
 
-    print segment_size
+    for i in range(number_of_segments):
+        current_x = x_min + (segment_size * i)
+        print current_x
