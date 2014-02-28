@@ -19,6 +19,7 @@ number_of_segments = 0
 #Define helper variables
 segment_size = 0.0
 current_x = 0.0
+total_sum = 0.0
 
 
 #Exit if an insufficient number of variables have has been entered 
@@ -36,5 +37,7 @@ else:
     segment_size = (x_max - x_min) / number_of_segments
 
     for i in range(number_of_segments):
-        current_x = x_min + (segment_size * i)
-        print current_x
+        current_x = x_min + (segment_size * i)        
+        total_sum = total_sum + calc(function, current_x + (0.5 * segment_size)) * segment_size
+
+    print total_sum
