@@ -17,7 +17,7 @@ x_max = 0.0
 number_of_segments = 0
 
 #Define helper variables
-
+segment_size = 0.0
 
 
 #Exit if an insufficient number of variables have has been entered 
@@ -31,3 +31,7 @@ else:
     x_min = float(sys.argv[2])
     x_max = float(sys.argv[3])
     number_of_segments = int(sys.argv[4])
+
+    segment_size = (x_max - x_min) / number_of_segments
+
+    print segment_size
