@@ -40,7 +40,7 @@ else:
     segment_size = (x_max - x_min) / number_of_segments
 
     for i in range(number_of_segments):
-        if i % percent_cycle == 0:
+        if percent_cycle >= 1 and i % percent_cycle == 0:
             print str((i / percent_cycle) + 1) + "%"
         current_x = x_min + (segment_size * i)        
         total_sum = total_sum + calc(function, current_x + (0.5 * segment_size)) * segment_size
