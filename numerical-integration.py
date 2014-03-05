@@ -35,14 +35,23 @@ else:
     x_max = float(sys.argv[3])
     number_of_segments = int(sys.argv[4])
 
+    #Calculate number of cycles to take up one percent of the total calculation
     percent_cycle = number_of_segments / 100
 
+    #Calculate segment size value span / number of segments
     segment_size = (x_max - x_min) / number_of_segments
 
+    #For every segment
     for i in range(number_of_segments):
+        #If one percent is more than a single cycle
+        #And the current i value is one of a pull percentage
+        #Print how for along program is
         if percent_cycle >= 1 and i % percent_cycle == 0:
             print str((i / percent_cycle) + 1) + "%"
-        current_x = x_min + (segment_size * i)        
+        #Caulcuate the x value for the current segment
+        current_x = x_min + (segment_size * i)
+        #Add the sum for the current segment to the total sum
+        #X used is the middle of the current segment (x + half segment)
         total_sum = total_sum + calc(function, current_x + (0.5 * segment_size)) * segment_size
 
     print total_sum
