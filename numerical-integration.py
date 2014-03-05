@@ -48,8 +48,10 @@ else:
         #Print how for along program is
         if percent_cycle >= 1 and i % percent_cycle == 0:
             print str((i / percent_cycle) + 1) + "%"
+            
         #Caulcuate the x value for the current segment
         current_x = x_min + (segment_size * i)
+        
         #Add the sum for the current segment to the total sum
         #X used is the middle of the current segment (x + half segment)
         total_sum = total_sum + calc(function, current_x + (0.5 * segment_size)) * segment_size
